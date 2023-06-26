@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:dslv="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:divider="?android:attr/dividerHorizontal"
+	android:showDividers="middle"
+	android:layout_height="fill_parent"
+	android:layout_width="fill_parent">
+	<com.mobeta.android.dslv.DragSortListView
+		android:id="@+id/list"
+		android:divider="@drawable/inset_divider"
+		android:dividerHeight="1dip"
+		android:layout_height="0px"
+		android:layout_width="fill_parent"
+		android:layout_weight="1"
+		android:choiceMode="multipleChoice"
+		dslv:drag_enabled="true"
+		dslv:drag_start_mode="onMove"
+		dslv:float_background_color="?float_color"
+		dslv:drag_handle_id="@+id/dragger" />
+	<LinearLayout
+		style="?android:attr/buttonBarStyle"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+		<Button
+			style="?android:attr/buttonBarButtonStyle"
+			android:id="@+id/restore_default"
+			android:layout_width="0px"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="@string/restore_default" />
+		<Button
+			style="?android:attr/buttonBarButtonStyle"
+			android:id="@+id/done"
+			android:layout_width="0px"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="@string/done" />
+	</LinearLayout>
+</LinearLayout>

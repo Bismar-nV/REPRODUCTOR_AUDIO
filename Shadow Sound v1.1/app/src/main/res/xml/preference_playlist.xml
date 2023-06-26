@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<PreferenceScreen
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:vanilla="http://schemas.android.com/apk/res-auto"
+	android:persistent="true">
+	<ch.univalleSucre.android.sadowsound.SeekBarPreference
+		android:key="playcounts_autoplaylist"
+		android:negativeButtonText="@null"
+		android:dialogLayout="@layout/seekbar_pref"
+		android:title="@string/autoplaylist_playcounts_title"
+		android:defaultValue="0"
+		vanilla:sbpMaxValue="100"
+		vanilla:sbpSteps="25"
+		vanilla:sbpSummaryText="@string/autoplaylist_playcounts_summary"
+		vanilla:sbpSummaryFormat="@string/autoplaylist_playcounts_fmt"
+		vanilla:sbpSummaryZeroText="@string/autoplaylist_playcounts_disabled"/>
+	<ch.univalleSucre.android.sadowsound.ListPreferenceSummary
+		android:key="playlist_sync_mode"
+		android:title="@string/playlist_sync_mode_title"
+		android:entries="@array/playlist_sync_mode_entries"
+		android:entryValues="@array/playlist_sync_mode_values"
+		android:defaultValue="0" />
+	<PreferenceScreen
+		android:dependency="playlist_sync_mode"
+		android:title="@string/playlist_sync_folder_title"
+		android:summary="@string/playlist_sync_folder_summary">
+		<intent
+			android:targetPackage="bo.univalleSucre.android.sadowsound"
+			android:targetClass="bo.univalleSucre.android.sadowsound.PlaylistObserverDirActivity" />
+	</PreferenceScreen>
+	<CheckBoxPreference
+		android:defaultValue="false"
+		android:dependency="playlist_sync_mode"
+		android:key="playlist_export_relative_paths"
+		android:summary="@string/playlist_export_relative_paths_summary"
+		android:title="@string/playlist_export_relative_paths_title" />
+</PreferenceScreen>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<PreferenceScreen
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:persistent="true">
+	<PreferenceScreen
+		android:title="@string/tabs"
+		android:summary="@string/customize_tab_order">
+		<intent
+			android:targetPackage="bo.univalleSucre.android.sadowsound"
+			android:targetClass="bo.univalleSucre.android.sadowsound.TabOrderActivity" />
+	</PreferenceScreen>
+	<ch.univalleSucre.android.sadowsound.ListPreferenceSummary
+		android:key="default_action_int"
+		android:title="@string/default_action_title"
+		android:entries="@array/default_action_entries"
+		android:entryValues="@array/default_action_entry_values"
+		android:defaultValue="9" />
+	<ch.univalleSucre.android.sadowsound.ListPreferenceSummary
+		android:key="default_playlist_action"
+		android:title="@string/default_playlist_action_title"
+		android:entries="@array/default_playlist_action_entries"
+		android:entryValues="@array/default_playlist_action_entry_values"
+		android:defaultValue="3" />
+	<CheckBoxPreference
+		android:key="enable_scroll_to_song"
+		android:title="@string/enable_scroll_to_song_title"
+		android:summary="@string/enable_scroll_to_song_summary"
+		android:defaultValue="false" />
+	<CheckBoxPreference
+		android:key="queue_enable_scroll_to_song"
+		android:title="@string/queue_enable_scroll_to_song_title"
+		android:summary="@string/queue_enable_scroll_to_song_summary"
+		android:defaultValue="false" />
+	<CheckBoxPreference
+		android:key="jump_to_enqueued_on_play"
+		android:title="@string/jump_to_enqueued_on_play_title"
+		android:summary="@string/jump_to_enqueued_on_play_summary"
+		android:defaultValue="true" />
+	<PreferenceScreen
+		android:title="@string/filebrowser_start"
+		android:summary="@string/customize_filebrowser_start">
+		<intent
+			android:targetPackage="bo.univalleSucre.android.sadowsound"
+			android:targetClass="bo.univalleSucre.android.sadowsound.FilebrowserStartActivity" />
+	</PreferenceScreen>
+</PreferenceScreen>

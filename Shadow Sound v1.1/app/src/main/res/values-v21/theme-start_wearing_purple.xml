@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+	<!-- dark theme -->
+	<style name="Start_wearing_purple.VanillaBase" parent="android:Theme.Material">
+		
+		<item name="android:colorBackground">@color/start_wearing_purple_background</item>
+		<item name="overlay_background_color">@color/start_wearing_purple_background</item>
+		
+		<item name="overlay_foreground_color">@color/overlay_foreground_dark</item>
+		<item name="float_color">#FF420264</item>
+		<item name="tabs_background">#FF5C038C</item>
+		<item name="now_playing_marker">#FF896FBC</item>
+		<item name="controls_normal">@color/material_grey_600</item>
+		<item name="controls_active">#FF896FBC</item>
+		<item name="android:colorAccent">#FF896FBC</item>
+		<item name="android:colorPrimary">#FF5C038C</item>
+		<item name="android:colorPrimaryDark">#FF420264</item>
+		<item name="themed_letter_tile_colors">@array/letter_tile_colors_dark</item>
+	</style>
+
+	<style name="Start_wearing_purple.Playback" parent="Start_wearing_purple.VanillaBase">
+		<item name="android:actionBarStyle">@style/Universal.PlaybackActionBar</item>
+	</style>
+
+	<style name="Start_wearing_purple.BackActionBar" parent="Start_wearing_purple.VanillaBase">
+		<item name="android:actionBarStyle">@style/Universal.PlaybackActionBar</item>
+	</style>
+
+	<style name="Start_wearing_purple.Library" parent="Start_wearing_purple.VanillaBase">
+		<item name="android:windowActionBar">false</item>
+		<item name="android:windowNoTitle">true</item>
+	</style>
+
+	<style name="Start_wearing_purple.PopupDialog" parent="android:Theme.Material.Dialog.MinWidth">
+		<item name="overlay_background_color">@color/overlay_background_dark</item>
+		<item name="controls_normal">@color/material_grey_600</item>
+		<item name="controls_active">#FF5C038C</item>
+	</style>
+
+	<style name="Start_wearing_purple.BottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+		<item name="android:colorBackground">@color/overlay_background_dark</item>
+	</style>
+
+</resources>

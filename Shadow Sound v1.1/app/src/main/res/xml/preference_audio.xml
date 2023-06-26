@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<PreferenceScreen
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:vanilla="http://schemas.android.com/apk/res-auto"
+	android:persistent="true">
+	<PreferenceScreen
+		android:fragment="bo.univalleSucre.android.sadowsound.PreferencesActivity$EqualizerFragment"
+		android:title="@string/equalizer"
+		android:summary="" />
+	<PreferenceScreen
+		android:fragment="bo.univalleSucre.android.sadowsound.PreferencesActivity$ReplayGainFragment"
+		android:title="@string/replaygain"
+		android:summary="@string/replaygain_summary" />
+	<ch.univalleSucre.android.sadowsound.SeekBarPreference
+		android:key="volume_during_ducking"
+		android:dialogLayout="@layout/seekbar_pref"
+		android:title="@string/volume_during_ducking_title"
+		android:defaultValue="50"
+		vanilla:sbpSummaryText="@string/volume_during_ducking_summary"
+		vanilla:sbpSummaryFormat="%s %.0f%%"
+		vanilla:sbpMaxValue="100"
+		vanilla:sbpCheckBoxKey="ignore_audiofocus_loss"
+		vanilla:sbpCheckBoxText="@string/ignore_audiofocus_loss_summary"
+		/>
+	<CheckBoxPreference
+	        android:key="disable_gapless_playback"
+		android:title="@string/disable_gapless_playback_title"
+		android:summary="@string/disable_gapless_playback_summary"
+		android:defaultValue="false" />
+	<CheckBoxPreference
+		android:key="headset_only"
+		android:title="@string/headset_only_title"
+		android:defaultValue="false"
+		android:summary="@string/headset_only_summary" />
+	<CheckBoxPreference
+		android:key="headset_pause"
+		android:title="@string/headset_pause_title"
+		android:defaultValue="true"
+		android:summary="@string/headset_pause_summary" />
+	<PreferenceScreen
+		android:fragment="bo.univalleSucre.android.sadowsound.PreferencesActivity$HeadsetLaunchFragment"
+		android:title="@string/headset_launch_title"
+		android:summary="@string/headset_launch_summary" />
+</PreferenceScreen>

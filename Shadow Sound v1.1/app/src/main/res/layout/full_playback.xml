@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:vanilla="http://schemas.android.com/apk/res-auto" >
+
+  <bo.univalleSucre.android.sadowsound.CoverView
+      android:id="@+id/cover_view"
+      android:layout_marginBottom="@dimen/full_playback_controls_height"
+      android:layout_height="fill_parent"
+      android:layout_width="fill_parent" />
+
+	<bo.univalleSucre.android.sadowsound.SlidingView
+		android:id="@+id/sliding_view"
+		android:layout_height="fill_parent"
+		android:layout_width="fill_parent"
+		android:layout_gravity="bottom|left"
+		android:layout_marginTop="0dip"
+		android:orientation="horizontal"
+		vanilla:slider_handle_id="@+id/queue_slider">
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:background="?overlay_background_color"
+				android:elevation="2dp"
+				android:layout_marginBottom="20dip"
+				android:paddingBottom="20dip"
+				android:orientation="vertical">
+					<include layout="@layout/seek_bar" />
+					<include layout="@layout/controls" android:id="@+id/queue_slider" />
+			</LinearLayout>
+
+
+			<fragment class="bo.univalleSucre.android.sadowsound.ShowQueueFragment"
+				android:id="@+id/queue"
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent" />
+	</bo.univalleSucre.android.sadowsound.SlidingView>
+
+
+</merge>

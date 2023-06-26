@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+	<header
+		android:fragment="bo.univalleSucre.android.sadowsound.PreferencesActivity$AudioFragment"
+		android:title="@string/audio" />
+	<header
+		android:fragment="bo.univalleSucre.android.sadowsound.PreferencesActivity$PlaybackFragment"
+		android:title="@string/playback_screen" />
+	<header
+		android:fragment="bo.univalleSucre.android.sadowsound.PreferencesActivity$LibraryFragment"
+		android:title="@string/library_screen" />
+	<header
+		android:fragment="bo.univalleSucre.android.sadowsound.PreferencesActivity$NotificationsFragment"
+		android:title="@string/notifications" />
+	<header
+		android:fragment="bo.univalleSucre.android.sadowsound.PreferencesActivity$ShakeFragment"
+		android:title="@string/accelerometer_shake" />
+	<header
+		android:fragment="bo.univalleSucre.android.sadowsound.PreferencesActivity$CoverArtFragment"
+		android:title="@string/cover_art" />
+	<header
+		android:fragment="bo.univalleSucre.android.sadowsound.PreferencesActivity$MiscFragment"
+		android:title="@string/misc_features" />
+	<header
+		android:fragment="bo.univalleSucre.android.sadowsound.PreferencesMediaLibrary"
+		android:title="@string/media_library" />
+	<header
+		android:fragment="bo.univalleSucre.android.sadowsound.PreferencesActivity$PlaylistFragment"
+		android:title="@string/playlists" />
+	<header
+		android:fragment="bo.univalleSucre.android.sadowsound.PreferencesTheme"
+		android:title="@string/theme" />
+	<header
+		android:fragment="bo.univalleSucre.android.sadowsound.PreferencesActivity$HelpFragment"
+		android:title="@string/help" />
+	<header
+		android:fragment="bo.univalleSucre.android.sadowsound.PreferencesActivity$AboutFragment"
+		android:title="@string/about" />
+</preference-headers>

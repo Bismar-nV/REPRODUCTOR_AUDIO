@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<PreferenceScreen
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:persistent="true">
+	<ch.univalleSucre.android.sadowsound.ListPreferenceSummary
+		android:key="notification_visibility"
+		android:title="@string/notification_visibility_title"
+		android:entries="@array/notification_visibility_entries"
+		android:entryValues="@array/entry_values"
+		android:defaultValue="0" />
+	<ch.univalleSucre.android.sadowsound.ListPreferenceSummary
+		android:key="notification_action"
+		android:title="@string/notification_action_title"
+		android:entries="@array/notification_action_entries"
+		android:entryValues="@array/entry_values"
+		android:defaultValue="0" />
+</PreferenceScreen>

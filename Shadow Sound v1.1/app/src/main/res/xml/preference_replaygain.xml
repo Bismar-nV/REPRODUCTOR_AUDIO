@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<PreferenceScreen
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:vanilla="http://schemas.android.com/apk/res-auto"
+	android:persistent="true">
+	<CheckBoxPreference
+		android:key="enable_track_replaygain"
+		android:title="@string/replaygain_track_title"
+		android:summary="@string/replaygain_track_summary"
+		android:defaultValue="false" />
+	<CheckBoxPreference
+		android:key="enable_album_replaygain"
+		android:title="@string/replaygain_album_title"
+		android:summary="@string/replaygain_album_summary"
+		android:defaultValue="false" />
+	<ch.univalleSucre.android.sadowsound.SeekBarPreference
+		android:key="replaygain_bump"
+		android:negativeButtonText="@null"
+		android:dialogLayout="@layout/seekbar_pref"
+		android:title="@string/replaygain_bump_title"
+		android:defaultValue="75"
+		vanilla:sbpMaxValue="150"
+		vanilla:sbpSummaryFormat="%s%+.1fdB"
+		vanilla:sbpSummaryValueAddition="-75"
+		vanilla:sbpSummaryValueMultiplication="0.2"
+		/>
+		<!-- x0.2 = /5 -->
+	<ch.univalleSucre.android.sadowsound.SeekBarPreference
+		android:key="replaygain_untagged_debump"
+		android:negativeButtonText="@null"
+		android:dialogLayout="@layout/seekbar_pref"
+		android:title="@string/replaygain_untagged_debump_title"
+		android:defaultValue="150"
+		vanilla:sbpMaxValue="150"
+		vanilla:sbpSummaryText="@string/replaygain_untagged_debump_summary"
+		vanilla:sbpSummaryFormat="%s %.1fdB"
+		vanilla:sbpSummaryValueAddition="-150"
+		vanilla:sbpSummaryValueMultiplication="0.1" />
+
+	<Preference
+		android:selectable="false"
+		android:title="@string/replaygain_preamp_note_title"
+		android:summary="@string/replaygain_preamp_note_content"
+		/>
+
+</PreferenceScreen>
